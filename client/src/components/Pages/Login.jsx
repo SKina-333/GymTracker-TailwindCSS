@@ -13,8 +13,6 @@ export default function Login() {
  
   const handleLogin = async (e) => {
     e.preventDefault();
-    console.log("Username:", username);  // Check if username is correct
-    console.log("Password:", password);  // Check if password is correct
 
     try {
       await axios
