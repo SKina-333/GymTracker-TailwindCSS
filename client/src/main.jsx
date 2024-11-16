@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 
 import { RouterProvider } from "react-router-dom";
-import router from "./routers/navRouter.jsx";
+import Router from "./routers/navRouter.jsx";
 import { WorkoutProvider } from "./components/contexts/workoutContext.jsx";
 
 import("tailwindcss").Config;
@@ -11,7 +11,7 @@ import("tailwindcss").Config;
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <WorkoutProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={Router} />
     </WorkoutProvider>
   </StrictMode>
 );

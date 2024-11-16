@@ -7,7 +7,7 @@ import Login from "../components/Pages/Login.jsx";
 
 import ProtectedRoute from "./protectedRoute.jsx";
 
-const router = createBrowserRouter([
+const Router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -32,4 +32,4 @@ const router = createBrowserRouter([
   }
 ]);
 
-export default router;
+export default Router;
