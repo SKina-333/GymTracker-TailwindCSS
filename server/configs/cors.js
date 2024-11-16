@@ -1,7 +1,10 @@
 const cors = require('cors');
 
 const corsOptions = {
-    origin: "https://gymclient-bm7t.onrender.com",
+    origin: [
+        'http://localhost:3000', // For local development
+        'https://your-frontend-service.onrender.com', // Your frontend Render URL
+      ],
     credentials: true,
 };
 
