@@ -1,11 +1,8 @@
 const crypto = require("crypto");
 const jsonwebtoken = require("jsonwebtoken");
 
-const fs = require("fs");
-const path = require("path");
 
-const pathToKey = path.join(__dirname, "../keys", "id_rsa_priv.pem");
-const PRIV_KEY = fs.readFileSync(pathToKey, "utf8");
+const PRIV_KEY = process.env.PRIV_KEY
 
 function validPassword(password, hash, salt) {
   var hashVerify = crypto
