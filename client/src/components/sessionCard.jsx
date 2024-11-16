@@ -1,11 +1,14 @@
-import { useState } from "react";
+
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import WorkoutCardContainer from "./workoutCardContainer";
 import { format } from "date-fns";
 
+
+
 export default function SessionCard({ session, isExpanded, onToggleExpand }) {
 
-  
+
+
 
   return (
     
@@ -17,11 +20,11 @@ export default function SessionCard({ session, isExpanded, onToggleExpand }) {
           className="flex flex-row justify-between items-center cursor-pointer"
         >
           <div className="flex flex-col gap-0 justify-between text-black">
-            <h3 className="text-xl font-semibold">{format(session.date,'EEEE io')}</h3>
+            <h3 className="text-xl font-semibold">{format(session.date,'EEEE do')}</h3>
             <div className="flex flex-col">
-              <p className="text-sm text-gray-600">Session - 3:30pm</p>
+              <p className="text-sm text-gray-600">Session - {session.time}</p>
               <div className="">
-                <p className="font-semibold text-sm ">{session.workoutType}</p>
+                <p className="font-semibold text-sm ">{session.WorkoutTypes.name}</p>
               </div>
             </div>
           </div>
@@ -35,7 +38,7 @@ export default function SessionCard({ session, isExpanded, onToggleExpand }) {
 
         {/* Expanded Exercise Details */}
         {isExpanded && (
-          <WorkoutCardContainer exercises={session.exercises} />
+          <WorkoutCardContainer exercises={session.Exercises} />
         )}
       </div>
     

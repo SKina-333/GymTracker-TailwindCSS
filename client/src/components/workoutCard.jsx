@@ -30,7 +30,7 @@ export default function WorkoutCard({ exercise }) {
       {isWorkoutExpanded && (
         <div className="flex flex-col gap-2">
           {/* Weight and Reps */}
-          {exercise.sets.map((set, index) => (
+          {exercise.Sets.map((set, index) => (
             <div className="grid grid-cols-4 gap-2" key={index}>
               <div className="col-span-1">
                 <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-1 text-sm font-sm text-green-700 shadow-md">
@@ -39,7 +39,7 @@ export default function WorkoutCard({ exercise }) {
               </div>
               <div className="col-span-3 flex flex-row gap-2">
                 <span>&#x2022;</span>
-                {set.reps} reps
+                {set.rep} reps
               </div>
             </div>
           ))}
@@ -47,7 +47,7 @@ export default function WorkoutCard({ exercise }) {
           <div>
             <div>Comments</div>
             <div className="p-2 rounded-lg bg-green-100 shadow-md">
-              {exercise.comment}
+              {exercise.comment? exercise.comment : "No Comment"}
             </div>
           </div>
         </div>
