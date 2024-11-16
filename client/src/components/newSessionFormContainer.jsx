@@ -90,7 +90,7 @@ export default function NewSessionFormContainer() {
     };
 
     try {
-      const response = await axios.post("http://localhost:5000/gym", formData, {
+      const response = await axios.post("https://gymtracker-tailwindcss.onrender.com/gym", formData, {
         withCredentials: true,
       });
       if (response.status === 201) {
