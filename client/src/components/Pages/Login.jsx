@@ -16,7 +16,7 @@ export default function Login() {
 
     try {
       await axios
-        .post("http://gymtracker-tailwindcss:5000/user/login", {username,password}, {withCredentials:true})
+        .post("https://gymtracker-tailwindcss.onrender.com/user/login", {username,password}, {withCredentials:true})
         .then((res) => {
           if (res.data.success){
             const token = res.data.token;

@@ -35,7 +35,7 @@ export const WorkoutProvider = ({ children }) => {
   const fetchWorkoutData = async () => {
     try {
       setLoading(true);
-      const response = await axiosInstance.get("http://gymtracker-tailwindcss:5000/gym", {
+      const response = await axiosInstance.get("https://gymtracker-tailwindcss.onrender.com/gym", {
         withCredentials: true,
       });
       if (response.status === 200) {
