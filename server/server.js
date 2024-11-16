@@ -8,7 +8,7 @@ const express = require("express");
 
 //Middleware imports
 const corsConfig = require('./configs/cors');
-const sessionConfig = require("./configs/express-session");
+
 
 
 //Application
@@ -25,7 +25,7 @@ const passport = require("passport");
 require('./configs/passportConfig')(passport);
 app.use(passport.initialize());
 app.use(corsConfig);
-app.use(sessionConfig);
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
