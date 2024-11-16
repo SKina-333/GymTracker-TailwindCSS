@@ -1,8 +1,8 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import App from "../App";
-import Dashboard from "../Components/Pages/Dashboard.jsx";
-import Progress from "../Components/Pages/Progress.jsx";
+import Dashboard from "../components/Pages/Dashboard.jsx";
+import Progress from "../components/Pages/Progress.jsx";
 import Login from "../components/Pages/Login.jsx";
 
 import ProtectedRoute from "./protectedRoute.jsx";
