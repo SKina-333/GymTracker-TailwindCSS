@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import LoadRepsInput from "./loadRepsInput";
 import { useWorkoutContext } from "./contexts/workoutContext.jsx";
 import { format } from "date-fns";
-import axios from "axios";
+
+
+import axiosInstance from "../routers/configs/axiosIntercepter.jsx";
 
 export default function NewSessionFormContainer() {
   const { workoutSessions, refetchSessions } = useWorkoutContext();
@@ -90,7 +92,7 @@ export default function NewSessionFormContainer() {
     };
 
     try {
-      const response = await axios.post("https://gymtracker-tailwindcss.onrender.com/gym", formData, {
+      const response = await axiosInstance.post("https://gymtracker-tailwindcss.onrender.com/gym", formData, {
         withCredentials: true,
       });
       if (response.status === 201) {
