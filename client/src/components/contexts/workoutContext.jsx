@@ -21,7 +21,7 @@ export const WorkoutProvider = ({ children }) => {
   const [currentMonth, setCurrentMonth] = useState(
     format(startOfToday(), "MMMM-yyyy")
   );
-  const [selectedDay, setSelectedDay] = useState(null);
+  const [selectedDay, setSelectedDay] = useState(startOfToday());
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedWeekSessions, setSelectedWeekSessions] = useState([]);
@@ -40,7 +40,7 @@ export const WorkoutProvider = ({ children }) => {
       });
       if (response.status === 200) {
         setWorkoutSessions(response.data);
-        
+        fetchSessionsForWeek(selectedDay)
       }
     } catch (err) {
       console.error("Error fetching workout data:", err);
