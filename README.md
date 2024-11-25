@@ -26,10 +26,16 @@ Currently, this application is far from finished. it only has the bare minimum f
 - Ensure that user recieve a notification when they either fail or success message when submitting
 - Ensure that user will recieve fail or success message when logging in
 - Have a register page
-- progress page
-- tbc
+- when browser refresh and user havent completed workout form, it will not be lost or reset
 
+- progress page (big feature)
+- need to change database model in order to allow user to create exercise
+- change UI so that user don't type their exercise but select from avaiable ones
+- user can track and compare their current performance with previous performance with an easy to understand UI
+- user can see when was the last time they exercise on that muscle group
 
+# Table of Contents
+# How to Install and Run Project
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -62,7 +68,7 @@ We have different types of licenses depending on the kind of project you are wor
 
 The most common one is the GPL License which allows other to make modification to your code and use it for commercial purposes. If you need help choosing a license, use check out this link: https://choosealicense.com/
 
-Up to this point what we have covered are the minimum requirements for a good README. But you might also want to consider adding the following sections to make it more eye catching and interactive.
+Up to this point what we have covered are the minimump requirements for a good README. But you might also want to consider adding the following sections to make it more eye catching and interactive.
 
 Additional README Sections
 8. Badges
