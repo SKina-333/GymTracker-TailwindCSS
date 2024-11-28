@@ -24,7 +24,7 @@ My biggest challenge in this project is learning how to integrate user authentic
 
 ### Future Feature
 Currently, this application is far from finished. it only has the bare minimum features to fulfill the main purpose of the application but missing many UX qualities and technical features that can provide users with more analytics for their training. This includes:
-- Ensure and prevent user from submitting multiple workout session by creating a loading screen and disable the submit button after clicking once
+- Ensure and prevent the user from submitting multiple workout session by creating a loading screen and disable the submit button after clicking once
 - Ensure that user recieve a notification when they either fail or success message when submitting
 - Ensure that user will recieve fail or success message when logging in
 - Have a register page
